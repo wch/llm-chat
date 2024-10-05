@@ -1,9 +1,11 @@
 Shiny chat app
 ==============
 
-This project contains a Shiny application which provides a chat interface to an LLM from OpenAI, similar to the one available at [chatgpt.com](https://chatgpt.com/).
+This project contains two Shiny chat applications:
+- `basic-chat` provides a chat interface to an LLM from OpenAI, similar to the one available at [chatgpt.com](https://chatgpt.com/).
+- `rag-chat` provides an example of Retrieval-Augmented Generation, where the chat application queries documentation from quarto.org Quarto to look for relevant pieces of information, then passes that information to an LLM, and asks the LLM to answer the user query using that information.
 
-To run it, first install some packages from R:
+To run these apps, first install some packages from R:
 
 ```R
 if (!require("pak")) install.packages("pak")  # Instal pak if not already installed
@@ -18,4 +20,6 @@ ANTHROPIC_API_KEY="XXXXXXX"
 EMBEDDING_IO_API_KEY="XXXXXXXX"
 ```
 
-Next, open basic-chat/app.R in the editor and click on the Run button. You should now have a running chat application!
+Next, open `basic-chat/app.R` in the editor and click on the Run button. You should now have a running chat application!
+
+For the RAG app, open `rag-chat/app.R` and click on the Run button.
