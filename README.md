@@ -15,6 +15,7 @@ Then create a file named `.env` in the project directory with API keys that you 
 ```
 OPENAI_API_KEY="XXXXXXX"
 ANTHROPIC_API_KEY="XXXXXXX"
+EMBEDDING_IO_API_KEY="XXXXXXXX"
 ```
 
 Next, open basic-chat/app.R in the editor and click on the Run button. You should now have a running chat application!
