@@ -1,9 +1,9 @@
-
-library(dotenv)
 library(shiny)
 library(shinychat)
 library(httr2)
 library(jsonlite)
+
+dotenv::load_dot_env("../env")
 
 EMBEDDING_IO_API_KEY <- Sys.getenv("EMBEDDING_IO_API_KEY")
 # The ID for the document collection on embedding.io

@@ -12,7 +12,7 @@ if (!require("pak")) install.packages("pak")  # Instal pak if not already instal
 pak::pak(c("dotenv", "shiny", "hadley/elmer", "jcheng5/shinychat"))
 ```
 
-Then create a file named `.env` in the project directory with API keys that you have been provided. (Replace the `XXXXXXXX` below with the actual API keys.)
+Then create a file named `env` in the project directory with API keys that you have been provided. (Replace the `XXXXXXXX` below with the actual API keys.)
 
 ```
 OPENAI_API_KEY="XXXXXXX"
