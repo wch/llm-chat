@@ -1,6 +1,8 @@
 Shiny chat app
 ==============
 
+GitHub page: https://github.com/wch/llm-chat
+
 This project contains two Shiny chat applications:
 - `basic-chat` provides a chat interface to an LLM from OpenAI, similar to the one available at [chatgpt.com](https://chatgpt.com/).
 - `rag-chat` provides an example of Retrieval-Augmented Generation, where the chat application queries documentation from quarto.org Quarto to look for relevant pieces of information, then passes that information to an LLM, and asks the LLM to answer the user query using that information.
