@@ -4,7 +4,7 @@ library(shinychat)
 dotenv::load_dot_env("../env")
 
 # Load the system prompt from disk
-system_prompt <- paste(collapse = "\n", readLines("prompt.txt", warn = FALSE))
+system_prompt <- paste(collapse = "\n", readLines("prompt.md", warn = FALSE))
 
 ui <- bslib::page_fluid(
   h2("Basic chat"),
