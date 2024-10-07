@@ -51,7 +51,6 @@ retrieve_docs <- function(query) {
   #   ..$ index   : int 6
   #   ..$ score   : num 0.409
 
-  # Ex
   all_item_contents <- lapply(content, function(item) {
     return(item$content)
   })
@@ -75,15 +74,12 @@ server <- function(input, output, session) {
     
     # Retrieve context documents from external source
     docs <- retrieve_docs(query)
-
-    # How do I add a drop shadow to images?
     
     # Combine the user input and retrieved documents
     context_query <- paste(
       "Please carefully read the following content. This is documentation about Quarto.",
       "Later, you may be asked a question about Quarto. Use this content to help answer the question.",
       "You may use your other existing knowledge to help answer the question.",
-      # "But if you don't know the answer, then say you don't know.",
 
       "<content>",
       paste(docs, collapse = "\n\n"),
@@ -94,7 +90,8 @@ server <- function(input, output, session) {
       sep = "\n"
     )
 
-    cat(context_query)
+    # Uncomment this to see the query printed to the console.
+    # cat(context_query)
 
     # Send query with context to chat
     stream <- chat$stream_async(context_query)
