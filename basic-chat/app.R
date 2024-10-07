@@ -7,7 +7,7 @@ dotenv::load_dot_env("../env")
 system_prompt <- paste(collapse = "\n", readLines("prompt.md", warn = FALSE))
 
 ui <- bslib::page_fluid(
-  h2("Basic chat"),
+  h2("Basic chat about R"),
   chat_ui("chat")
 )
 
